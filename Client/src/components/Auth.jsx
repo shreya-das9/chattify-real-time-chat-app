@@ -12,7 +12,7 @@ import { TailSpin, Comment, Discuss } from 'react-loader-spinner';
 
 
 const Auth = () => {
-    const [bgLink, setBglink] = useState("https://w0.peakpx.com/wallpaper/30/145/HD-wallpaper-polygonal-abstract-red-dark-background-abstract-dark-red-deviantart.jpg")
+    const [bgLink, setBglink] = useState("https://images.unsplash.com/photo-1557821552-17105176677c?w=1920&q=80")
     const [authState, setAuthState] = useState("login");
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [wait, setWait] = useState(false)

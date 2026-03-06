@@ -18,8 +18,19 @@ const PORT = process.env.PORT || 4000;
 
 
 // middlewares
+const allowedOrigins = [
+    process.env.FRONTEND_URL || 'http://localhost:5173',
+    'https://chat-app-rho-swart.vercel.app'
+];
+
 app.use(cors({
-    origin: 'https://chat-app-rho-swart.vercel.app',
+    origin: (origin, callback) => {
+        if (!origin || allowedOrigins.includes(origin)) {
+            callback(null, true);
+        } else {
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true,
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"]
 }));
