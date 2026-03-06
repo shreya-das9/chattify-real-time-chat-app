@@ -12,7 +12,7 @@ import { TailSpin, Comment, Discuss } from 'react-loader-spinner';
 
 
 const Auth = () => {
-    const [bgLink, setBglink] = useState("https://images.unsplash.com/photo-1557821552-17105176677c?w=1920&q=80")
+    const [bgLink, setBglink] = useState("https://images.unsplash.com/photo-1611987557486-8725b32ee1d0?w=1920&q=80")
     const [authState, setAuthState] = useState("login");
     const [passwordVisible, setPasswordVisible] = useState(false);
     const [wait, setWait] = useState(false)
@@ -104,8 +104,7 @@ const Auth = () => {
     }, [authState])
 
     return (
-        <div className={`flex justify-center items-center min-h-screen relative font-raleway`}>
-            <img src={bgLink} alt="Background Image" className='absolute min-h-screen w-screen object-fit' />
+        <div className={`flex justify-center items-center min-h-screen relative font-raleway bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500`}>
             <div className=' formContainer text-black bg-[#EEF7FF] backdrop-blur-md p-2 rounded-md max-w-96
             m-2'>
                 <div className=''>
